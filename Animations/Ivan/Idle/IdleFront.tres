@@ -1,0 +1,67 @@
+[gd_resource type="SpriteFrames" load_steps=10 format=3 uid="uid://b2wpaiwlrx2v4"]
+
+[ext_resource type="Texture2D" uid="uid://m2v3gve1kex5" path="res://TexturesWinterTale/Ivan/IdleFront.png" id="1_6x0e1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m1yaa"]
+atlas = ExtResource("1_6x0e1")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2f6d"]
+atlas = ExtResource("1_6x0e1")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fdb7"]
+atlas = ExtResource("1_6x0e1")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8avtq"]
+atlas = ExtResource("1_6x0e1")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hdaar"]
+atlas = ExtResource("1_6x0e1")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gim0n"]
+atlas = ExtResource("1_6x0e1")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y0aiv"]
+atlas = ExtResource("1_6x0e1")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vff3f"]
+atlas = ExtResource("1_6x0e1")
+region = Rect2(224, 0, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m1yaa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s2f6d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2fdb7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8avtq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hdaar")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gim0n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y0aiv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vff3f")
+}],
+"loop": true,
+"name": &"IdleFront",
+"speed": 7.0
+}]

@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dosihivehtcs1"]
+
+[ext_resource type="Script" uid="uid://bc0kf60utc5vf" path="res://BaseEnemy.cs" id="1_7k104"]
+
+[node name="Enemy" type="RigidBody2D"]
+
+[node name="BaseEnemy" type="Node" parent="."]
+script = ExtResource("1_7k104")
+
+[node name="SoldierScript" type="Node" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
