@@ -337,7 +337,7 @@ layout_mode = 2
 [node name="ItemFrame14" parent="Player/UIPlayer/Inventory/Frame/MarginContainer/Slots" instance=ExtResource("17_dvofv")]
 layout_mode = 2
 
-[node name="HotBar" type="Control" parent="Player/UIPlayer"]
+[node name="HotBar" type="Control" parent="Player/UIPlayer" node_paths=PackedStringArray("InventoryBase", "Hbox")]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 291.0
@@ -345,6 +345,8 @@ offset_top = 559.0
 offset_right = 331.0
 offset_bottom = 599.0
 script = ExtResource("18_e1iit")
+InventoryBase = NodePath("../../Inventory")
+Hbox = NodePath("MarginContainer/HBoxContainer")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Player/UIPlayer/HotBar"]
 texture_filter = 1

@@ -12,6 +12,7 @@ public partial class InventoryGrid : GridContainer
 
 	private ItemFrame Dragging = null;
 	private Vector2 itemInitialPosition;
+
 /// <summary>
 /// Define o índice do item no inventário ao ser arrastado no início do dragging :)
 /// </summary>
@@ -31,7 +32,7 @@ public partial class InventoryGrid : GridContainer
 		 MouseDetection();
 	}
 
-	public void TurnSlotsChildrenToItemFrame()
+	 void TurnSlotsChildrenToItemFrame()
 	{
 		
 		Grid = new ItemFrame[PlayerInventory.InventoryMaxSlot];
@@ -42,7 +43,7 @@ public partial class InventoryGrid : GridContainer
 		}
 	}
 	
-	public void SetItemTexturesInTheInventory()
+	 void SetItemTexturesInTheInventory()
 	{
 		var InventorySlots = PlayerInventory.inventory;
 		for(int i = 0 ; i < InventorySlots.Length; i++)
@@ -61,7 +62,7 @@ public partial class InventoryGrid : GridContainer
 		}
 	}
 
-	public void MouseDetection()
+	 void MouseDetection()
 	{	
 		Vector2 MousePosition = GetGlobalMousePosition();
 	
