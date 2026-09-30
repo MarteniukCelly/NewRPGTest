@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://gjioy4p6yoda"]
+
+[ext_resource type="Texture2D" uid="uid://bcw0mdlgyrtht" path="res://TexturesWinterTale/RPGAssetsGame/Inventory.png" id="1_bx43p"]
+[ext_resource type="Script" uid="uid://b760xqmct31r6" path="res://Scripts/UIRelated/ItemFrame.cs" id="2_8jipe"]
+[ext_resource type="Texture2D" uid="uid://1fkq75dm8hrg" path="res://TexturesWinterTale/ItensSprite/Meat.png" id="3_8jipe"]
+[ext_resource type="FontFile" uid="uid://02ejrfx75su3" path="res://Fonts/Minecraft.ttf" id="3_rhvph"]
+
+[node name="ItemFrame" type="NinePatchRect" node_paths=PackedStringArray("ItemIconRect", "ItemAmountLabel")]
+texture_filter = 1
+custom_minimum_size = Vector2(64, 64)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_bx43p")
+script = ExtResource("2_8jipe")
+ItemIconRect = NodePath("TextureRect")
+ItemAmountLabel = NodePath("ItemAmount")
+
+[node name="ItemAmount" type="Label" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 39.0
+offset_right = 46.0
+offset_bottom = 90.0
+theme_override_fonts/font = ExtResource("3_rhvph")
+theme_override_font_sizes/font_size = 24
+text = "0
+"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_8jipe")

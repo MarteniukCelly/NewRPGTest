@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://w86kqtroy4yg"]
+
+[ext_resource type="Texture2D" uid="uid://derkno8upldr" path="res://TexturesWinterTale/wolf_gray_full.png" id="1_2j7oq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mgtsy"]
+atlas = ExtResource("1_2j7oq")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75sli"]
+atlas = ExtResource("1_2j7oq")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_buxda"]
+atlas = ExtResource("1_2j7oq")
+region = Rect2(160, 0, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mgtsy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75sli")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_buxda")
+}],
+"loop": true,
+"name": &"AttackFront",
+"speed": 5.0
+}]

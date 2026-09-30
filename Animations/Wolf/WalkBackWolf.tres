@@ -1,0 +1,46 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://da030vou8hib7"]
+
+[ext_resource type="Texture2D" uid="uid://derkno8upldr" path="res://TexturesWinterTale/wolf_gray_full.png" id="1_5h2kh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fmedw"]
+atlas = ExtResource("1_5h2kh")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2pf6v"]
+atlas = ExtResource("1_5h2kh")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xepy0"]
+atlas = ExtResource("1_5h2kh")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ibw5w"]
+atlas = ExtResource("1_5h2kh")
+region = Rect2(128, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iirgx"]
+atlas = ExtResource("1_5h2kh")
+region = Rect2(160, 96, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fmedw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2pf6v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xepy0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ibw5w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iirgx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

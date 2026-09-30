@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://c6pn0qgpy4jsi"]
+
+[ext_resource type="Texture2D" uid="uid://derkno8upldr" path="res://TexturesWinterTale/wolf_gray_full.png" id="1_f24g1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gh4ge"]
+atlas = ExtResource("1_f24g1")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1t48"]
+atlas = ExtResource("1_f24g1")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5org"]
+atlas = ExtResource("1_f24g1")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_43vj1"]
+atlas = ExtResource("1_f24g1")
+region = Rect2(160, 0, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gh4ge")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1t48")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5org")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_43vj1")
+}],
+"loop": true,
+"name": &"WalkFrontWolf",
+"speed": 5.0
+}]

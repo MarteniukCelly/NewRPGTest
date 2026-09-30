@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://txfh8hcsnwtd"]
+
+[ext_resource type="Texture2D" uid="uid://bbyfvgf8xwj01" path="res://TexturesWinterTale/16x32 All Animations-Sheet.png" id="1_hesqg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_77fob"]
+atlas = ExtResource("1_hesqg")
+region = Rect2(256, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gygjc"]
+atlas = ExtResource("1_hesqg")
+region = Rect2(288, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jvu0"]
+atlas = ExtResource("1_hesqg")
+region = Rect2(320, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jqduf"]
+atlas = ExtResource("1_hesqg")
+region = Rect2(352, 32, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_77fob")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gygjc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1jvu0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jqduf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]

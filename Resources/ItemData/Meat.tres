@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://deoryhtlmpd8w"]
+
+[ext_resource type="Script" uid="uid://ckd24iadb1y1l" path="res://Scripts/ItemRelated/ItemData.cs" id="1_cc0iw"]
+[ext_resource type="Texture2D" uid="uid://1fkq75dm8hrg" path="res://TexturesWinterTale/ItensSprite/Meat.png" id="1_ms52m"]
+[ext_resource type="Texture2D" uid="uid://bjga53re7ytgf" path="res://TexturesWinterTale/ItensSprite/Meat_Big.png" id="2_iwuos"]
+
+[resource]
+script = ExtResource("1_cc0iw")
+ItemName = "Meat"
+ItemDescription = "Food, acquired by hunting animals."
+ItemTextureInGame = ExtResource("1_ms52m")
+ItemTextureInInventory = ExtResource("2_iwuos")
+metadata/_custom_type_script = "uid://ckd24iadb1y1l"

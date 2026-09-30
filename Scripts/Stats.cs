@@ -8,6 +8,10 @@ public partial class Stats : Node
 
 	[Export]
 	public float BaseLife= 100.0f;
+	protected float CurrentLife;
+
+	[Export]
+	protected float MaxLife = 100;
 	[Export]
 	public float BaseDamage = 20.0f;
 
@@ -24,6 +28,7 @@ public partial class Stats : Node
 
     public override void _Ready()
     {
+		CurrentLife = MaxLife;
         base._Ready();
     }
 

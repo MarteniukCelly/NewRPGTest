@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dm0pdbigry187"]
+
+[ext_resource type="Script" uid="uid://cjj2qpgqt25e0" path="res://Scripts/ItemRelated/PickUpItem.cs" id="1_e4hac"]
+[ext_resource type="Resource" uid="uid://cgkb2stqixfx7" path="res://Resources/ItemData/Bug.tres" id="2_4aaxn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xk2aw"]
+
+[node name="Bug" type="Area2D"]
+
+[node name="Script" type="Node" parent="." node_paths=PackedStringArray("Sprite", "Collision")]
+script = ExtResource("1_e4hac")
+Data = ExtResource("2_4aaxn")
+Sprite = NodePath("../Sprite2D")
+Collision = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xk2aw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

@@ -1,0 +1,52 @@
+[gd_scene load_steps=11 format=3 uid="uid://dosihivehtcs1"]
+
+[ext_resource type="Script" uid="uid://deax53agkb8my" path="res://Scripts/Characters/WolfScript.cs" id="1_hghv2"]
+[ext_resource type="Script" uid="uid://ct13g5vt6mgws" path="res://Scripts/Stats.cs" id="2_afpow"]
+[ext_resource type="SpriteFrames" uid="uid://c0y78pmd0br14" path="res://Animations/Wolf/IdleSideWolf.tres" id="2_auwsv"]
+[ext_resource type="SpriteFrames" uid="uid://lr00a0uvy1u3" path="res://Animations/Wolf/IdleFrontWolf.tres" id="3_8uf12"]
+[ext_resource type="SpriteFrames" uid="uid://wterxer8h5tq" path="res://Animations/Wolf/IdleBackWolf.tres" id="4_po0sg"]
+[ext_resource type="SpriteFrames" uid="uid://c6pn0qgpy4jsi" path="res://Animations/Wolf/WalkFrontWolf.tres" id="5_haro7"]
+[ext_resource type="SpriteFrames" uid="uid://ch0c8eh7ydydt" path="res://Animations/Wolf/WalkSideWolf.tres" id="6_56vhr"]
+[ext_resource type="SpriteFrames" uid="uid://da030vou8hib7" path="res://Animations/Wolf/WalkBackWolf.tres" id="7_ta2yt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1f0kj"]
+radius = 37.735924
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_afpow"]
+radius = 8.5440035
+
+[node name="WolfEnemy" type="RigidBody2D"]
+gravity_scale = 0.0
+lock_rotation = true
+
+[node name="WolfScript" type="Node" parent="." node_paths=PackedStringArray("Stats", "TargetingArea", "Stats", "Rb", "Sprite")]
+script = ExtResource("1_hghv2")
+Stats = NodePath("../Stats")
+TargetingArea = NodePath("../Area2D")
+StopDistance = 400.0
+Stats = NodePath("../Stats")
+Speed = 50.0
+Rb = NodePath("..")
+Sprite = NodePath("../Spritetemp")
+IdleSide = ExtResource("2_auwsv")
+IdleFront = ExtResource("3_8uf12")
+IdleBack = ExtResource("4_po0sg")
+WalkFront = ExtResource("5_haro7")
+WalkSide = ExtResource("6_56vhr")
+WalkBack = ExtResource("7_ta2yt")
+
+[node name="Stats" type="Node" parent="."]
+script = ExtResource("2_afpow")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="TargetArea" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_1f0kj")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_afpow")
+
+[node name="Spritetemp" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -5)
+sprite_frames = ExtResource("4_po0sg")

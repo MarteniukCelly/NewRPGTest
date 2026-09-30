@@ -1,0 +1,414 @@
+[gd_scene load_steps=30 format=4 uid="uid://dt2ctfb6s4hhj"]
+
+[ext_resource type="Texture2D" uid="uid://b3s5j7ee8ctin" path="res://TexturesWinterTale/Tilesets/Tiletset.png" id="1_lop0i"]
+[ext_resource type="Script" uid="uid://dlu1or0buoea5" path="res://Scripts/Characters/PlayerScript.cs" id="2_8ed56"]
+[ext_resource type="SpriteFrames" uid="uid://txfh8hcsnwtd" path="res://Animations/Ivan/Idle/IdleSidePlayer.tres" id="3_mds03"]
+[ext_resource type="SpriteFrames" uid="uid://dkh161febbi62" path="res://Animations/Ivan/Idle/IdleFrontPlayer.tres" id="4_4p54a"]
+[ext_resource type="Script" uid="uid://ct13g5vt6mgws" path="res://Scripts/Stats.cs" id="4_e46k6"]
+[ext_resource type="SpriteFrames" uid="uid://cv75cbi4pnpsy" path="res://Animations/Ivan/Idle/IdleBackPlayer.tres" id="4_pjwaj"]
+[ext_resource type="Script" uid="uid://bn2dqi35lg6m1" path="res://Scripts/TesteDanoScriipt.cs" id="5_1d07u"]
+[ext_resource type="SpriteFrames" uid="uid://bkhyeg5c67ul5" path="res://Animations/Ivan/Walk/WalkFrontPlayer.tres" id="5_4p54a"]
+[ext_resource type="Script" uid="uid://b6yuauonl0vhw" path="res://Scripts/UIRelated/Root.cs" id="6_4c6i7"]
+[ext_resource type="Texture2D" uid="uid://b4vxnr38h23dj" path="res://TexturesWinterTale/RPGAssetsGame/NoLife.png" id="6_e46k6"]
+[ext_resource type="SpriteFrames" uid="uid://djs1tb0x71oyd" path="res://Animations/Ivan/Walk/WalkSidePlayer.tres" id="6_gbmyn"]
+[ext_resource type="Texture2D" uid="uid://dwnqb7dm8kb2d" path="res://TexturesWinterTale/RPGAssetsGame/FullLife.png" id="7_1d07u"]
+[ext_resource type="FontFile" uid="uid://02ejrfx75su3" path="res://Fonts/Minecraft.ttf" id="7_24505"]
+[ext_resource type="SpriteFrames" uid="uid://k8yud6u7gy4r" path="res://Animations/Ivan/Walk/WalkBackPlayer.tres" id="7_twshb"]
+[ext_resource type="PackedScene" uid="uid://dosihivehtcs1" path="res://Scenes/enemy.tscn" id="8_8ed56"]
+[ext_resource type="Script" uid="uid://cd10kc6sevifq" path="res://Scripts/ItemRelated/Inventory.cs" id="10_4p54a"]
+[ext_resource type="Resource" uid="uid://deoryhtlmpd8w" path="res://Resources/ItemData/Meat.tres" id="12_24505"]
+[ext_resource type="Texture2D" uid="uid://bvpqd250iw5ug" path="res://TexturesWinterTale/RPGAssetsGame/Inventoryall.png" id="15_twshb"]
+[ext_resource type="Script" uid="uid://cy1foagmyj6v6" path="res://Scripts/UIRelated/InventoryGrid.cs" id="16_dvofv"]
+[ext_resource type="Script" uid="uid://cjj2qpgqt25e0" path="res://Scripts/ItemRelated/PickUpItem.cs" id="16_mds03"]
+[ext_resource type="PackedScene" uid="uid://gjioy4p6yoda" path="res://item_frame.tscn" id="17_dvofv"]
+[ext_resource type="Script" uid="uid://cyygksavaxxet" path="res://Scenes/HotBar.cs" id="18_e1iit"]
+[ext_resource type="PackedScene" uid="uid://dm0pdbigry187" path="res://Resources/ItemData/bug.tscn" id="22_ii3s8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ep5lw"]
+texture = ExtResource("1_lop0i")
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+29:1/0 = 0
+30:1/0 = 0
+31:1/0 = 0
+32:1/0 = 0
+33:1/0 = 0
+34:1/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+29:2/0 = 0
+30:2/0 = 0
+31:2/0 = 0
+32:2/0 = 0
+33:2/0 = 0
+34:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+29:3/0 = 0
+30:3/0 = 0
+31:3/0 = 0
+32:3/0 = 0
+33:3/0 = 0
+34:3/0 = 0
+38:3/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+29:4/0 = 0
+30:4/0 = 0
+31:4/0 = 0
+32:4/0 = 0
+33:4/0 = 0
+34:4/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+22:5/0 = 0
+23:5/0 = 0
+25:5/0 = 0
+26:5/0 = 0
+29:5/0 = 0
+30:5/0 = 0
+31:5/0 = 0
+32:5/0 = 0
+33:5/0 = 0
+34:5/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+22:6/0 = 0
+23:6/0 = 0
+25:6/0 = 0
+26:6/0 = 0
+29:6/0 = 0
+30:6/0 = 0
+31:6/0 = 0
+32:6/0 = 0
+33:6/0 = 0
+34:6/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+8:11/0 = 0
+8:12/0 = 0
+7:12/0 = 0
+6:11/0 = 0
+5:11/0 = 0
+4:11/0 = 0
+3:11/0 = 0
+2:11/0 = 0
+7:11/0 = 0
+6:12/0 = 0
+5:12/0 = 0
+4:12/0 = 0
+3:12/0 = 0
+2:12/0 = 0
+1:12/0 = 0
+1:11/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_jpj0s"]
+sources/2 = SubResource("TileSetAtlasSource_ep5lw")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8ed56"]
+radius = 8.062258
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ed56"]
+size = Vector2(23, 29)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ep5lw"]
+radius = 24.738634
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8m3se"]
+
+[node name="Principal" type="Node2D"]
+texture_filter = 3
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+texture_filter = 3
+position = Vector2(-1, 0)
+rotation = 0.00057504844
+tile_map_data = PackedByteArray("AAD6/wMAAgAGAAsAAAD6/wQAAgAGAAwAAAD7/wMAAgAHAAsAAAD7/wQAAgAHAAwAAAD8/wMAAgAIAAsAAAD8/wQAAgAIAAwAAAD9/wMAAgABAAsAAAD9/wQAAgABAAwAAAD+/wMAAgACAAsAAAD+/wQAAgACAAwAAAD//wMAAgADAAsAAAD//wQAAgADAAwAAAAAAAMAAgAEAAsAAAAAAAQAAgAEAAwAAAABAAMAAgAFAAsAAAABAAQAAgAFAAwAAAACAAMAAgAGAAsAAAACAAQAAgAGAAwAAAADAAMAAgAHAAsAAAADAAQAAgAHAAwAAAAEAAQAAgAIAAwAAAAFAAMAAgABAAsAAAAFAAQAAgABAAwAAAAEAAMAAgAIAAsAAAAEAAAAAgAfAAMAAAAEAAEAAgAfAAQAAAAEAAIAAgAfAAUAAAAFAAAAAgAfAAQAAAAFAAEAAgAgAAQAAAAFAAIAAgAgAAUAAAACAAAAAgAfAAMAAAACAAEAAgAfAAQAAAACAAIAAgAfAAUAAAADAAAAAgAgAAMAAAADAAEAAgAgAAQAAAADAAIAAgAgAAUAAAAAAAAAAgAfAAMAAAAAAAEAAgAfAAQAAAAAAAIAAgAfAAUAAAABAAAAAgAgAAMAAAABAAEAAgAgAAQAAAABAAIAAgAgAAUAAAD+/wAAAgAfAAMAAAD+/wEAAgAfAAQAAAD+/wIAAgAfAAUAAAD//wAAAgAgAAMAAAD//wEAAgAgAAQAAAD//wIAAgAgAAUAAAD8/wAAAgAfAAMAAAD8/wEAAgAfAAQAAAD8/wIAAgAfAAUAAAD9/wAAAgAgAAMAAAD9/wEAAgAgAAQAAAD9/wIAAgAgAAUAAAD6/wAAAgAgAAMAAAD6/wEAAgAgAAQAAAD6/wIAAgAgAAUAAAD7/wAAAgAgAAMAAAD7/wEAAgAgAAQAAAD7/wIAAgAgAAUAAAD6////AgAgAAUAAAD7//3/AgAgAAMAAAD7//7/AgAgAAQAAAD7////AgAgAAUAAAD6//r/AgAgAAQAAAD6//v/AgAgAAMAAAD6//z/AgAgAAQAAAD7//r/AgAfAAQAAAD7//v/AgAfAAMAAAD7//z/AgAfAAQAAAD8//r/AgAgAAQAAAD8//v/AgAgAAMAAAD8//z/AgAgAAQAAAD9//r/AgAfAAQAAAD9//v/AgAfAAMAAAD9//z/AgAfAAQAAAD8//3/AgAfAAMAAAD8//7/AgAfAAQAAAD8////AgAfAAUAAAD9//3/AgAgAAMAAAD9//7/AgAgAAQAAAD9////AgAgAAUAAAD+//3/AgAfAAMAAAD+//7/AgAfAAQAAAD+////AgAfAAUAAAD///3/AgAgAAMAAAD///7/AgAgAAQAAAD/////AgAgAAUAAAAAAP3/AgAfAAMAAAAAAP7/AgAfAAQAAAAAAP//AgAfAAUAAAABAP3/AgAgAAMAAAABAP7/AgAgAAQAAAABAP//AgAgAAUAAAD+//r/AgAgAAQAAAD+//v/AgAgAAMAAAD+//z/AgAgAAQAAAD///r/AgAfAAQAAAD///v/AgAfAAMAAAD///z/AgAfAAQAAAAAAPr/AgAgAAQAAAAAAPv/AgAgAAMAAAAAAPz/AgAgAAQAAAABAPr/AgAfAAQAAAABAPv/AgAfAAMAAAABAPz/AgAfAAQAAAACAPr/AgAgAAQAAAACAPv/AgAgAAMAAAACAPz/AgAgAAQAAAADAPr/AgAfAAQAAAADAPv/AgAfAAMAAAADAPz/AgAfAAQAAAACAP3/AgAfAAMAAAACAP7/AgAfAAQAAAACAP//AgAfAAUAAAADAP3/AgAgAAMAAAADAP7/AgAgAAQAAAADAP//AgAgAAUAAAAEAP3/AgAfAAMAAAAEAP7/AgAfAAQAAAAEAP//AgAfAAUAAAAFAP3/AgAfAAMAAAAFAP7/AgAfAAQAAAAFAP//AgAfAAMAAAAEAPr/AgAgAAQAAAAEAPv/AgAgAAMAAAAEAPz/AgAgAAQAAAAFAPr/AgAfAAQAAAAFAPv/AgAfAAMAAAAFAPz/AgAfAAQAAAD5//r/AgAfAAQAAAD5//v/AgAfAAMAAAD5//z/AgAfAAQAAAD5//3/AgAfAAMAAAD5//7/AgAfAAQAAAD5////AgAfAAUAAAD5/wAAAgAfAAMAAAD5/wEAAgAfAAQAAAD5/wIAAgAfAAUAAAD3/wAAAgAfAAMAAAD3/wEAAgAfAAQAAAD3/wIAAgAfAAUAAAD4/wAAAgAgAAMAAAD4/wEAAgAgAAQAAAD4/wIAAgAgAAUAAAD3//3/AgAfAAMAAAD3//7/AgAfAAQAAAD3////AgAfAAUAAAD4//3/AgAgAAMAAAD4//7/AgAgAAQAAAD4////AgAgAAUAAAD3//r/AgAfAAQAAAD3//v/AgAfAAMAAAD3//z/AgAfAAQAAAD4//r/AgAgAAQAAAD4//v/AgAgAAMAAAD4//z/AgAgAAQAAAD1//r/AgAfAAQAAAD1//v/AgAfAAQAAAD1//z/AgAfAAUAAAD2//r/AgAgAAQAAAD2//v/AgAgAAQAAAD2//z/AgAgAAUAAAD1//3/AgAfAAMAAAD1//7/AgAfAAQAAAD1////AgAfAAUAAAD2//3/AgAgAAMAAAD2//7/AgAgAAQAAAD2////AgAgAAUAAAD1/wAAAgAfAAMAAAD1/wEAAgAfAAQAAAD1/wIAAgAfAAUAAAD2/wAAAgAgAAMAAAD2/wEAAgAgAAQAAAD2/wIAAgAgAAUAAAD3/wQAAgADAAwAAAD4/wQAAgAEAAwAAAD5/wQAAgAFAAwAAAD5/wMAAgAFAAsAAAD2/wQAAgACAAwAAAD3/wMAAgADAAsAAAD4/wMAAgAEAAsAAAD1/wMAAgABAAsAAAD1/wQAAgABAAwAAAD2/wMAAgACAAsAAAAGAAMAAgACAAsAAAAGAAQAAgACAAwAAAAHAAMAAgADAAsAAAAHAAQAAgADAAwAAAAIAAMAAgAEAAsAAAAIAAQAAgAEAAwAAAAJAAMAAgAFAAsAAAAJAAQAAgAFAAwAAAAKAAMAAgAGAAsAAAAKAAQAAgAGAAwAAAALAAMAAgAHAAsAAAALAAQAAgAHAAwAAAAMAAMAAgAIAAsAAAAMAAQAAgAIAAwAAAAGAAEAAgAfAAMAAAAGAAIAAgAfAAQAAAAHAAEAAgAgAAMAAAAHAAIAAgAgAAQAAAAIAAEAAgAfAAMAAAAIAAIAAgAfAAQAAAAJAAEAAgAgAAMAAAAJAAIAAgAgAAQAAAAKAAEAAgAfAAMAAAAKAAIAAgAfAAQAAAALAAEAAgAgAAMAAAALAAIAAgAgAAQAAAAMAAEAAgAfAAMAAAAMAAIAAgAfAAQAAAAHAP//AgAfAAMAAAAHAAAAAgAfAAQAAAAIAP//AgAgAAMAAAAIAAAAAgAgAAQAAAAJAP//AgAfAAMAAAAJAAAAAgAfAAQAAAAKAP//AgAgAAMAAAAKAAAAAgAgAAQAAAAGAP//AgAgAAMAAAAGAAAAAgAgAAQAAAAHAP3/AgAfAAMAAAAHAP7/AgAfAAQAAAAIAP3/AgAgAAMAAAAIAP7/AgAgAAQAAAAHAPv/AgAfAAMAAAAHAPz/AgAfAAQAAAAIAPv/AgAgAAMAAAAIAPz/AgAgAAQAAAAGAPv/AgAgAAMAAAAGAPz/AgAgAAQAAAAGAP3/AgAgAAMAAAAGAP7/AgAgAAQAAAAFAPn/AgAfAAMAAAAGAPn/AgAgAAMAAAAGAPr/AgAgAAQAAAAHAPn/AgAfAAMAAAAHAPr/AgAfAAQAAAAIAPn/AgAgAAMAAAAIAPr/AgAgAAQAAAAJAPn/AgAfAAMAAAAJAPr/AgAfAAQAAAAKAPn/AgAgAAMAAAAKAPr/AgAgAAQAAAAJAPv/AgAfAAMAAAAJAPz/AgAfAAQAAAAKAPv/AgAgAAMAAAAKAPz/AgAgAAQAAAAJAP3/AgAfAAMAAAAJAP7/AgAfAAQAAAAKAP3/AgAgAAMAAAAKAP7/AgAgAAQAAAALAP3/AgAfAAMAAAALAP7/AgAfAAQAAAAMAP3/AgAgAAMAAAAMAP7/AgAgAAQAAAALAPv/AgAfAAMAAAALAPz/AgAfAAQAAAAMAPv/AgAgAAMAAAAMAPz/AgAgAAQAAAAFAPf/AgAfAAMAAAAFAPj/AgAfAAQAAAAGAPf/AgAgAAMAAAAGAPj/AgAgAAQAAAADAPf/AgAfAAMAAAADAPj/AgAfAAQAAAAEAPf/AgAgAAMAAAAEAPj/AgAgAAQAAAABAPf/AgAfAAMAAAABAPj/AgAfAAQAAAACAPf/AgAgAAMAAAACAPj/AgAgAAQAAAD///f/AgAfAAMAAAD///j/AgAfAAQAAAAAAPf/AgAgAAMAAAAAAPj/AgAgAAQAAAD9//f/AgAfAAMAAAD9//j/AgAfAAQAAAD+//f/AgAgAAMAAAD+//j/AgAgAAQAAAD9//n/AgAfAAMAAAD+//n/AgAgAAMAAAD7//n/AgAfAAMAAAD8//n/AgAgAAMAAAD5//n/AgAfAAMAAAD6//n/AgAgAAMAAAADAPn/AgAfAAMAAAAEAPn/AgAgAAMAAAABAPn/AgAfAAMAAAACAPn/AgAgAAMAAAD///n/AgAfAAMAAAAAAPn/AgAgAAMAAAD7//f/AgAfAAMAAAD7//j/AgAfAAQAAAD8//f/AgAgAAMAAAD8//j/AgAgAAQAAAD5//f/AgAfAAMAAAD5//j/AgAfAAQAAAD6//f/AgAgAAMAAAD6//j/AgAgAAQAAAD3//f/AgAfAAMAAAD3//j/AgAfAAQAAAD4//f/AgAgAAMAAAD4//j/AgAgAAQAAAD1//f/AgAfAAMAAAD1//j/AgAfAAQAAAD2//f/AgAgAAMAAAD2//j/AgAgAAQAAAD3//n/AgAfAAMAAAD4//n/AgAgAAMAAAD1//n/AgAfAAMAAAD2//n/AgAgAAMAAAALAP//AgAfAAMAAAALAAAAAgAfAAQAAAAMAP//AgAgAAMAAAAMAAAAAgAgAAQAAAALAPn/AgAfAAMAAAALAPr/AgAfAAQAAAAMAPn/AgAgAAMAAAAMAPr/AgAgAAQAAAALAPf/AgAfAAMAAAALAPj/AgAfAAQAAAAMAPf/AgAgAAMAAAAMAPj/AgAgAAQAAAAJAPf/AgAfAAMAAAAJAPj/AgAfAAQAAAAKAPf/AgAgAAMAAAAKAPj/AgAgAAQAAAAHAPf/AgAfAAMAAAAHAPj/AgAfAAQAAAAIAPf/AgAgAAMAAAAIAPj/AgAgAAQAAAD6//3/AgAgAAMAAAD6//7/AgAgAAMAAAA=")
+tile_set = SubResource("TileSet_jpj0s")
+
+[node name="Player" type="RigidBody2D" parent="."]
+position = Vector2(-34, -1)
+gravity_scale = 0.0
+lock_rotation = true
+
+[node name="PlayerScript" type="Node" parent="Player" node_paths=PackedStringArray("Stats", "AttackArea", "Rb", "Sprite")]
+script = ExtResource("2_8ed56")
+Stats = NodePath("Stats")
+Speed = 50.0
+AttackArea = NodePath("../PlayerAxe")
+Rb = NodePath("..")
+Sprite = NodePath("../PlayerSprites")
+IdleSide = ExtResource("3_mds03")
+IdleFront = ExtResource("4_4p54a")
+IdleBack = ExtResource("4_pjwaj")
+WalkFront = ExtResource("5_4p54a")
+WalkSide = ExtResource("6_gbmyn")
+WalkBack = ExtResource("7_twshb")
+
+[node name="Stats" type="Node" parent="Player/PlayerScript"]
+script = ExtResource("4_e46k6")
+
+[node name="PlayerSprites" type="AnimatedSprite2D" parent="Player"]
+sprite_frames = ExtResource("4_4p54a")
+speed_scale = 0.75
+
+[node name="PlayerCollision" type="CollisionShape2D" parent="Player"]
+shape = SubResource("CircleShape2D_8ed56")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(4, 4)
+
+[node name="PlayerAxe" type="Area2D" parent="Player"]
+
+[node name="AttackArea" type="CollisionShape2D" parent="Player/PlayerAxe"]
+position = Vector2(-1, 16.5)
+shape = SubResource("RectangleShape2D_8ed56")
+
+[node name="Inventory" type="Node" parent="Player"]
+script = ExtResource("10_4p54a")
+
+[node name="UIPlayer" type="CanvasLayer" parent="Player"]
+
+[node name="Root" type="Control" parent="Player/UIPlayer" node_paths=PackedStringArray("Player", "LabelLife", "LifePB", "InventoryUI")]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("6_4c6i7")
+Player = NodePath("../../PlayerScript")
+LabelLife = NodePath("Label")
+LifePB = NodePath("TextureProgressBar")
+InventoryUI = NodePath("../Inventory")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Player/UIPlayer/Root"]
+layout_mode = 0
+offset_right = 263.0
+offset_bottom = 40.0
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Player/UIPlayer/Root"]
+texture_filter = 3
+custom_minimum_size = Vector2(200, 16)
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 6.0
+value = 100.0
+rounded = true
+nine_patch_stretch = true
+stretch_margin_left = 3
+stretch_margin_top = 3
+stretch_margin_right = 3
+stretch_margin_bottom = 3
+texture_under = ExtResource("6_e46k6")
+texture_progress = ExtResource("7_1d07u")
+
+[node name="Label" type="Label" parent="Player/UIPlayer/Root"]
+texture_filter = 3
+layout_mode = 0
+offset_left = 204.0
+offset_top = 2.0
+offset_right = 263.0
+offset_bottom = 37.0
+theme_override_fonts/font = ExtResource("7_24505")
+text = "100/100"
+
+[node name="Inventory" type="Control" parent="Player/UIPlayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 28.0
+offset_right = 40.0
+offset_bottom = 68.0
+
+[node name="Frame" type="NinePatchRect" parent="Player/UIPlayer/Inventory"]
+texture_filter = 1
+layout_mode = 0
+offset_top = 19.0
+offset_right = 500.0
+offset_bottom = 219.0
+texture = ExtResource("15_twshb")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="Player/UIPlayer/Inventory/Frame"]
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 141.0
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 9
+
+[node name="Slots" type="GridContainer" parent="Player/UIPlayer/Inventory/Frame/MarginContainer" node_paths=PackedStringArray("PlayerInventory")]
+layout_mode = 2
+columns = 7
+script = ExtResource("16_dvofv")
+PlayerInventory = NodePath("../../../../../Inventory")
+
+[node name="ItemFrame" parent="Player/UIPlayer/Inventory/Frame/MarginContainer/Slots" instance=ExtResource("17_dvofv")]
+layout_mode = 2
+
+[node name="ItemFrame2" parent="Player/UIPlayer/Inventory/Frame/MarginContainer/Slots" instance=ExtResource("17_dvofv")]
+layout_mode = 2
+
+[node name="ItemFrame3" parent="Player/UIPlayer/Inventory/Frame/MarginContainer/Slots" instance=ExtResource("17_dvofv")]
+layout_mode = 2
+
+[node name="ItemFrame4" parent="Player/UIPlayer/Inventory/Frame/MarginContainer/Slots" instance=ExtResource("17_dvofv")]
+layout_mode = 2
+
+[node name="ItemFrame5" parent="Player/UIPlayer/Inventory/Frame/MarginContainer/Slots" instance=ExtResource("17_dvofv")]
+layout_mode = 2
+
+[node name="ItemFrame6" parent="Player/UIPlayer/Inventory/Frame/MarginContainer/Slots" instance=ExtResource("17_dvofv")]
+layout_mode = 2
+
+[node name="ItemFrame7" parent="Player/UIPlayer/Inventory/Frame/MarginContainer/Slots" instance=ExtResource("17_dvofv")]
+layout_mode = 2
+
+[node name="ItemFrame8" parent="Player/UIPlayer/Inventory/Frame/MarginContainer/Slots" instance=ExtResource("17_dvofv")]
+layout_mode = 2
+
+[node name="ItemFrame9" parent="Player/UIPlayer/Inventory/Frame/MarginContainer/Slots" instance=ExtResource("17_dvofv")]
+layout_mode = 2
+
+[node name="ItemFrame11" parent="Player/UIPlayer/Inventory/Frame/MarginContainer/Slots" instance=ExtResource("17_dvofv")]
+layout_mode = 2
+
+[node name="ItemFrame13" parent="Player/UIPlayer/Inventory/Frame/MarginContainer/Slots" instance=ExtResource("17_dvofv")]
+layout_mode = 2
+
+[node name="ItemFrame14" parent="Player/UIPlayer/Inventory/Frame/MarginContainer/Slots" instance=ExtResource("17_dvofv")]
+layout_mode = 2
+
+[node name="HotBar" type="Control" parent="Player/UIPlayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 291.0
+offset_top = 559.0
+offset_right = 331.0
+offset_bottom = 599.0
+script = ExtResource("18_e1iit")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Player/UIPlayer/HotBar"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Player/UIPlayer/HotBar"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Player/UIPlayer/HotBar/MarginContainer"]
+layout_mode = 2
+
+[node name="ItemFrame" parent="Player/UIPlayer/HotBar/MarginContainer/HBoxContainer" instance=ExtResource("17_dvofv")]
+layout_mode = 2
+
+[node name="ItemFrame2" parent="Player/UIPlayer/HotBar/MarginContainer/HBoxContainer" instance=ExtResource("17_dvofv")]
+layout_mode = 2
+
+[node name="ItemFrame3" parent="Player/UIPlayer/HotBar/MarginContainer/HBoxContainer" instance=ExtResource("17_dvofv")]
+layout_mode = 2
+
+[node name="ItemFrame4" parent="Player/UIPlayer/HotBar/MarginContainer/HBoxContainer" instance=ExtResource("17_dvofv")]
+layout_mode = 2
+
+[node name="ItemFrame5" parent="Player/UIPlayer/HotBar/MarginContainer/HBoxContainer" instance=ExtResource("17_dvofv")]
+layout_mode = 2
+
+[node name="ItemFrame6" parent="Player/UIPlayer/HotBar/MarginContainer/HBoxContainer" instance=ExtResource("17_dvofv")]
+layout_mode = 2
+
+[node name="ItemFrame7" parent="Player/UIPlayer/HotBar/MarginContainer/HBoxContainer" instance=ExtResource("17_dvofv")]
+layout_mode = 2
+
+[node name="ItemFrame8" parent="Player/UIPlayer/HotBar/MarginContainer/HBoxContainer" instance=ExtResource("17_dvofv")]
+layout_mode = 2
+
+[node name="TesteDeDano" type="Area2D" parent="."]
+
+[node name="AreaCollision" type="CollisionShape2D" parent="TesteDeDano"]
+position = Vector2(189, 36)
+shape = SubResource("CircleShape2D_ep5lw")
+
+[node name="TesteDanoScriipt" type="Node" parent="TesteDeDano" node_paths=PackedStringArray("HurtBox")]
+script = ExtResource("5_1d07u")
+HurtBox = NodePath("..")
+
+[node name="WolfEnemy" parent="." instance=ExtResource("8_8ed56")]
+position = Vector2(118, -56)
+
+[node name="Item" type="Area2D" parent="."]
+
+[node name="Script" type="Node" parent="Item" node_paths=PackedStringArray("Sprite", "Collision")]
+script = ExtResource("16_mds03")
+Data = ExtResource("12_24505")
+Sprite = NodePath("../Sprite2D")
+Collision = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item"]
+shape = SubResource("CircleShape2D_8m3se")
+
+[node name="Sprite2D" type="Sprite2D" parent="Item"]
+
+[node name="Bug" parent="Item" instance=ExtResource("22_ii3s8")]
+position = Vector2(-71, 0)

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwn7x1wi760w6"]
+
+[ext_resource type="Script" uid="uid://ci5wg6fpig6vb" path="res://TreeScript.cs" id="1_kaw3h"]
+
+[node name="Tree" type="RigidBody2D"]
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("1_kaw3h")
