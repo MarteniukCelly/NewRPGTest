@@ -78,7 +78,7 @@ public partial class Stats : Node
 			{
 				if (mod.StatType == StatType.MaxLife) //HP
 				{
-					BonusMaxLife = mod.Amount;
+					BonusMaxLife = mod.Amount; 
 				}
 
 				if (mod.StatType == StatType.Damage) //DMG
@@ -93,11 +93,14 @@ public partial class Stats : Node
 			}
 
 			//Mudar HP, speed e dmg
-
+			float proportion = CurrentLife / MaxLife;
 			MaxLife += BonusMaxLife;
+			CurrentLife = MaxLife* proportion;
+
 			BaseDamage += BonusDamage;
 			BaseWalkSpeed += BonusSpeed;
 			OnHealthChange?.Invoke(this.CurrentLife, this.MaxLife);
+			
 		}
 		
 	}

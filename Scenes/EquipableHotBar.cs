@@ -14,6 +14,12 @@ public partial class EquipableHotBar : Control
 	[Export]
 	Control Control; //pai dos item frames
 
+	[Export]
+	Label CurrentDamageLabel;
+
+	[Export]
+	Label CurrentSpeedLabel;
+
 	int CurrentIndex;
 
 	 int EquipHotBarMaxSlots = 4; 
@@ -21,11 +27,14 @@ public partial class EquipableHotBar : Control
 	public override void _Ready()
 	{
 		TurnSlotsChildrenToItemFrame();
+		stats.OnHealthChange+= ShowPlayerStats;
+		ShowPlayerStats(0,0);
 	}
 
 	public override void _Process(double delta)
 	{
 		SetItemTexturesInTheInventory();
+		
 	}
 
 
@@ -60,5 +69,13 @@ public partial class EquipableHotBar : Control
 		}
 	}
  
+	public void ShowPlayerStats(float a_nothing, float b_nothing )
+	{
+		
+		CurrentDamageLabel.Text = $"Damage: {stats.BaseDamage}";
+		CurrentSpeedLabel.Text = $" Speed: {stats.BaseWalkSpeed}";
+		
+
+	}
 	
 }

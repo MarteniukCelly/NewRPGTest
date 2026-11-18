@@ -285,9 +285,10 @@ offset_bottom = 68.0
 [node name="Frame" type="NinePatchRect" parent="Player/UIPlayer/Inventory"]
 texture_filter = 1
 layout_mode = 0
-offset_top = 19.0
-offset_right = 500.0
-offset_bottom = 219.0
+offset_left = 351.0
+offset_top = -8.0
+offset_right = 851.0
+offset_bottom = 192.0
 texture = ExtResource("15_twshb")
 patch_margin_left = 5
 patch_margin_top = 5
@@ -393,7 +394,7 @@ layout_mode = 2
 [node name="ItemFrame8" parent="Player/UIPlayer/HotBar/MarginContainer/HBoxContainer" instance=ExtResource("17_dvofv")]
 layout_mode = 2
 
-[node name="EquipableHotBar" type="Control" parent="Player/UIPlayer" node_paths=PackedStringArray("InventoryBase", "stats", "Control")]
+[node name="EquipableHotBar" type="Control" parent="Player/UIPlayer" node_paths=PackedStringArray("InventoryBase", "stats", "Control", "CurrentDamageLabel", "CurrentSpeedLabel")]
 texture_filter = 1
 layout_mode = 3
 anchors_preset = 0
@@ -405,13 +406,15 @@ script = ExtResource("19_3tow0")
 InventoryBase = NodePath("../../Inventory")
 stats = NodePath("../../PlayerScript/Stats")
 Control = NodePath("NinePatchRect")
+CurrentDamageLabel = NodePath("NinePatchRect/CurrentDamageLabel")
+CurrentSpeedLabel = NodePath("NinePatchRect/CurrentSpeedLabel")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Player/UIPlayer/EquipableHotBar"]
 layout_mode = 0
-offset_left = -17.0
-offset_top = -11.0
-offset_right = 300.0
-offset_bottom = 188.0
+offset_left = -518.0
+offset_top = -39.0
+offset_right = -201.0
+offset_bottom = 160.0
 texture = ExtResource("20_sp8er")
 patch_margin_left = 15
 patch_margin_top = 15
@@ -451,8 +454,27 @@ offset_bottom = 146.0
 IsEquipmentSlot = true
 
 [node name="iconplayershowcase" type="Sprite2D" parent="Player/UIPlayer/EquipableHotBar/NinePatchRect"]
-position = Vector2(235, 92)
+position = Vector2(229, 83)
 texture = ExtResource("21_87yob")
+
+[node name="CurrentDamageLabel" type="Label" parent="Player/UIPlayer/EquipableHotBar/NinePatchRect"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 164.0
+offset_right = 73.0
+offset_bottom = 187.0
+theme_override_fonts/font = ExtResource("7_24505")
+text = "Damage"
+
+[node name="CurrentSpeedLabel" type="Label" parent="Player/UIPlayer/EquipableHotBar/NinePatchRect"]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 164.0
+offset_right = 219.0
+offset_bottom = 199.0
+theme_override_fonts/font = ExtResource("7_24505")
+text = "Speed
+"
 
 [node name="TesteDeDano" type="Area2D" parent="."]
 
