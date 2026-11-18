@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EquipableItem" load_steps=5 format=3 uid="uid://cydinm0qgrg4f"]
+
+[ext_resource type="Texture2D" uid="uid://6q8jmeewaa3a" path="res://TexturesWinterTale/ItensSprite/Image20261021191718.png" id="1_j3uuv"]
+[ext_resource type="Script" uid="uid://dw3hw6xjf40hk" path="res://Scripts/ItemRelated/EquipableItem.cs" id="2_fnf5h"]
+[ext_resource type="Script" uid="uid://2jpii4yg128y" path="res://Scripts/StatsModifier.cs" id="2_nyhaa"]
+
+[sub_resource type="Resource" id="Resource_2hwr1"]
+script = ExtResource("2_nyhaa")
+Amount = 50.0
+metadata/_custom_type_script = "uid://2jpii4yg128y"
+
+[resource]
+script = ExtResource("2_fnf5h")
+Modifiers = Array[ExtResource("2_nyhaa")]([SubResource("Resource_2hwr1")])
+ItemName = "armor"
+ItemTextureInGame = ExtResource("1_j3uuv")
+ItemTextureInInventory = ExtResource("1_j3uuv")
+metadata/_custom_type_script = "uid://ckd24iadb1y1l"

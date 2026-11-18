@@ -6,10 +6,10 @@ public partial class TesteDanoScriipt : Node
 	[Export]
 	protected Area2D HurtBox;
 	[Export]
-	protected double AttackSpeed = 0.5d;
+	protected double AttackSpeed = 1.0d;
 	protected PlayerScript PlayerInRange;
 
-	int Damage =20;
+	float Damage = 10.0f;
 
 	protected PlayerScript PlayerPotentialDamage;
 	protected double TimeSinceLastAttack = 0;
@@ -58,6 +58,7 @@ public partial class TesteDanoScriipt : Node
 	protected void AttackPlayer(double delta)
 	{ 
 		TimeSinceLastAttack+= delta;
+
 		//GD.Print(TimeSinceLastAttack);
 		if(PlayerInRange != null)
 		{
@@ -65,6 +66,7 @@ public partial class TesteDanoScriipt : Node
 			{
 				PlayerInRange.ReceiveDamage(Damage);
 				TimeSinceLastAttack= 0;
+				return;
 			}
 		}
 	}

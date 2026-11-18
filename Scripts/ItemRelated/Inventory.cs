@@ -20,6 +20,8 @@ public partial class Inventory : Node
 	//functions: search item in inventory; put item in inventory;
 	public InventorySlot[] inventory = new InventorySlot[12];
 
+	public EquipableItem[] EquipSlots = new EquipableItem[4];
+
 	public bool AddItem(ItemData NewItem)
 	{
 		SearchItemInInventory(NewItem);
@@ -57,4 +59,32 @@ public partial class Inventory : Node
 		
 	}
 
+	//Equipable item 
+
+	public bool AddEquipableItem(EquipableItem equipable, int index)
+	{
+		if(EquipSlots[(int)equipable.EquipableItemSlot] == null) //caso inventário de equipable estiver sem nada 
+		{
+			EquipSlots[(int)equipable.EquipableItemSlot] = equipable;
+			inventory[index].ItemAmount = 0;
+			inventory[index].Item = null;
+
+		}
+
+		else
+		{
+			//swap the item 
+			var temp = EquipSlots[(int)equipable.EquipableItemSlot];
+			EquipSlots[(int)equipable.EquipableItemSlot] = equipable;				
+			inventory[index].Item = temp; //Inverte pra nao ter que cair em outro caso do item diferente
+			inventory[index].ItemAmount = 1;
+		}
+
+		GD.Print("You find a new placement for the item");
+		GD.Print($"quem está no slot é {EquipSlots[(int)equipable.EquipableItemSlot].ItemName}");		
+		return true;
+	}
+
+
+	
 }

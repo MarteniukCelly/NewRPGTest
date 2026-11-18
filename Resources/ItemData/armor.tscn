@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://263bnen1g0bo"]
+
+[ext_resource type="Script" uid="uid://cjj2qpgqt25e0" path="res://Scripts/ItemRelated/PickUpItem.cs" id="1_y3hfy"]
+[ext_resource type="Resource" uid="uid://cydinm0qgrg4f" path="res://Resources/ItemData/Armor.tres" id="2_y3hfy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p2yqn"]
+
+[node name="Area2D" type="Area2D"]
+
+[node name="Node" type="Node" parent="." node_paths=PackedStringArray("Sprite", "Collision")]
+script = ExtResource("1_y3hfy")
+Data = ExtResource("2_y3hfy")
+Sprite = NodePath("../Sprite2D")
+Collision = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_p2yqn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

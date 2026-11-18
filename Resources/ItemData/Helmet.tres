@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="EquipableItem" load_steps=3 format=3 uid="uid://p0bed2jbwbvk"]
+
+[ext_resource type="Texture2D" uid="uid://dpsemdc4rwtwl" path="res://TexturesWinterTale/ItensSprite/Image20261021191653.png" id="1_e8pd3"]
+[ext_resource type="Script" uid="uid://dw3hw6xjf40hk" path="res://Scripts/ItemRelated/EquipableItem.cs" id="2_a3ggk"]
+
+[resource]
+script = ExtResource("2_a3ggk")
+EquipableItemSlot = 2
+ItemName = "Helmet"
+ItemTextureInGame = ExtResource("1_e8pd3")
+ItemTextureInInventory = ExtResource("1_e8pd3")
+metadata/_custom_type_script = "uid://ckd24iadb1y1l"

@@ -12,6 +12,9 @@ public partial class ItemFrame : NinePatchRect
 	Label ItemAmountLabel;
 	public int ItemAmountNumber;
 
+	[Export]
+	bool IsEquipmentSlot = false;
+
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -27,7 +30,7 @@ public partial class ItemFrame : NinePatchRect
 	public void SetItemInTheinventory()
 	{
 		ItemIconRect.Texture = ItemIconTexture;
-		if(ItemAmountNumber <= 0)
+		if(ItemAmountNumber <= 0 || IsEquipmentSlot == true)
 		{
 			ItemAmountLabel.Visible = false;
 		}
@@ -36,6 +39,7 @@ public partial class ItemFrame : NinePatchRect
 			ItemAmountLabel.Text = ItemAmountNumber.ToString();
 			ItemAmountLabel.Visible = true;
 		}
+
 	}
 
 }

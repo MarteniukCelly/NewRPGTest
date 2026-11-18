@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://dt2ctfb6s4hhj"]
+[gd_scene load_steps=35 format=4 uid="uid://dt2ctfb6s4hhj"]
 
 [ext_resource type="Texture2D" uid="uid://b3s5j7ee8ctin" path="res://TexturesWinterTale/Tilesets/Tiletset.png" id="1_lop0i"]
 [ext_resource type="Script" uid="uid://dlu1or0buoea5" path="res://Scripts/Characters/PlayerScript.cs" id="2_8ed56"]
@@ -21,8 +21,13 @@
 [ext_resource type="Script" uid="uid://cy1foagmyj6v6" path="res://Scripts/UIRelated/InventoryGrid.cs" id="16_dvofv"]
 [ext_resource type="Script" uid="uid://cjj2qpgqt25e0" path="res://Scripts/ItemRelated/PickUpItem.cs" id="16_mds03"]
 [ext_resource type="PackedScene" uid="uid://gjioy4p6yoda" path="res://item_frame.tscn" id="17_dvofv"]
-[ext_resource type="Script" uid="uid://cyygksavaxxet" path="res://Scenes/HotBar.cs" id="18_e1iit"]
+[ext_resource type="Script" uid="uid://cyygksavaxxet" path="res://Scripts/UIRelated/HotBar.cs" id="18_e1iit"]
+[ext_resource type="Script" uid="uid://b6rixc87core3" path="res://Scenes/EquipableHotBar.cs" id="19_3tow0"]
+[ext_resource type="Texture2D" uid="uid://bcw0mdlgyrtht" path="res://TexturesWinterTale/RPGAssetsGame/Inventory.png" id="20_sp8er"]
+[ext_resource type="Texture2D" uid="uid://cvkucy6e35agt" path="res://icon.svg" id="21_87yob"]
 [ext_resource type="PackedScene" uid="uid://dm0pdbigry187" path="res://Resources/ItemData/bug.tscn" id="22_ii3s8"]
+[ext_resource type="PackedScene" uid="uid://c2rw1kx2ajuuu" path="res://Resources/ItemData/helmet.tscn" id="24_3so0l"]
+[ext_resource type="PackedScene" uid="uid://263bnen1g0bo" path="res://Resources/ItemData/armor.tscn" id="25_xtmj4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ep5lw"]
 texture = ExtResource("1_lop0i")
@@ -337,7 +342,7 @@ layout_mode = 2
 [node name="ItemFrame14" parent="Player/UIPlayer/Inventory/Frame/MarginContainer/Slots" instance=ExtResource("17_dvofv")]
 layout_mode = 2
 
-[node name="HotBar" type="Control" parent="Player/UIPlayer" node_paths=PackedStringArray("InventoryBase", "Hbox")]
+[node name="HotBar" type="Control" parent="Player/UIPlayer" node_paths=PackedStringArray("InventoryBase", "stats", "Hbox")]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 291.0
@@ -346,6 +351,7 @@ offset_right = 331.0
 offset_bottom = 599.0
 script = ExtResource("18_e1iit")
 InventoryBase = NodePath("../../Inventory")
+stats = NodePath("../../PlayerScript/Stats")
 Hbox = NodePath("MarginContainer/HBoxContainer")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Player/UIPlayer/HotBar"]
@@ -386,6 +392,67 @@ layout_mode = 2
 [node name="ItemFrame8" parent="Player/UIPlayer/HotBar/MarginContainer/HBoxContainer" instance=ExtResource("17_dvofv")]
 layout_mode = 2
 
+[node name="EquipableHotBar" type="Control" parent="Player/UIPlayer" node_paths=PackedStringArray("InventoryBase", "stats", "Control")]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 0
+offset_left = 531.0
+offset_top = 60.0
+offset_right = 571.0
+offset_bottom = 100.0
+script = ExtResource("19_3tow0")
+InventoryBase = NodePath("../../Inventory")
+stats = NodePath("../../PlayerScript/Stats")
+Control = NodePath("NinePatchRect")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Player/UIPlayer/EquipableHotBar"]
+layout_mode = 0
+offset_left = -17.0
+offset_top = -11.0
+offset_right = 300.0
+offset_bottom = 188.0
+texture = ExtResource("20_sp8er")
+patch_margin_left = 15
+patch_margin_top = 15
+patch_margin_right = 15
+patch_margin_bottom = 15
+
+[node name="ItemFrame" parent="Player/UIPlayer/EquipableHotBar/NinePatchRect" instance=ExtResource("17_dvofv")]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 72.0
+offset_bottom = 74.0
+IsEquipmentSlot = true
+
+[node name="ItemFrame2" parent="Player/UIPlayer/EquipableHotBar/NinePatchRect" instance=ExtResource("17_dvofv")]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 11.0
+offset_right = 144.0
+offset_bottom = 75.0
+IsEquipmentSlot = true
+
+[node name="ItemFrame3" parent="Player/UIPlayer/EquipableHotBar/NinePatchRect" instance=ExtResource("17_dvofv")]
+layout_mode = 0
+offset_left = 79.0
+offset_top = 83.0
+offset_right = 143.0
+offset_bottom = 147.0
+IsEquipmentSlot = true
+
+[node name="ItemFrame4" parent="Player/UIPlayer/EquipableHotBar/NinePatchRect" instance=ExtResource("17_dvofv")]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 82.0
+offset_right = 73.0
+offset_bottom = 146.0
+IsEquipmentSlot = true
+
+[node name="iconplayershowcase" type="Sprite2D" parent="Player/UIPlayer/EquipableHotBar/NinePatchRect"]
+position = Vector2(235, 92)
+texture = ExtResource("21_87yob")
+
 [node name="TesteDeDano" type="Area2D" parent="."]
 
 [node name="AreaCollision" type="CollisionShape2D" parent="TesteDeDano"]
@@ -414,3 +481,9 @@ shape = SubResource("CircleShape2D_8m3se")
 
 [node name="Bug" parent="Item" instance=ExtResource("22_ii3s8")]
 position = Vector2(-71, 0)
+
+[node name="Area2D" parent="." instance=ExtResource("24_3so0l")]
+position = Vector2(-59, -46)
+
+[node name="Area2D2" parent="." instance=ExtResource("25_xtmj4")]
+position = Vector2(-3, -48)

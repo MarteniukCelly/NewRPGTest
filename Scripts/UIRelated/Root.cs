@@ -31,17 +31,16 @@ public partial class Root : Control
 		ShowInventory();
 	}
 
-	private void UpdateHealthBar(float CurrentLife)
-	{
+	private void UpdateHealthBar(float CurrentLife, float MaxLife)
+	{	
 		LifePB.Value = CurrentLife;
-		LabelLife.Text = $"{CurrentLife}/{LifePB.MaxValue}";
+		GD.Print( $"{CurrentLife}/{MaxLife}");
+		LabelLife.Text = $"{CurrentLife}/{MaxLife}";
+		
 		
 	}
 
-	private void UpdateMaxBarValue(float MaxLife)
-	{
-		LifePB.MaxValue = MaxLife;
-	}
+	
 
 	private void ShowInventory()
 	{

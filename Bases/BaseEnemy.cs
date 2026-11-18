@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.ComponentModel;
 
 public abstract partial class BaseEnemy : BaseCharacter
 {
@@ -36,13 +37,15 @@ public abstract partial class BaseEnemy : BaseCharacter
 		TargetingArea.BodyEntered += FindTarget;
 		TargetingArea.BodyExited += Clear;
 		CurrentState = State.Idling;
-		GD.Print(CurrentState);
+		
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
 		Animations();
+		
+	
 	}
 
     public override void _PhysicsProcess(double delta)
@@ -119,7 +122,7 @@ public abstract partial class BaseEnemy : BaseCharacter
 
 		if(CurrentState == State.Walking)
 		{
-			if(Rb.GlobalPosition.X > 0 && Rb.GlobalPosition.Y == 0)
+			if(Rb.LinearVelocity.X > 0 && Rb.LinearVelocity.Y == 0)
 			{
 				LastSide = Side.Right;
 				Sprite.SpriteFrames = WalkSide;
@@ -127,7 +130,7 @@ public abstract partial class BaseEnemy : BaseCharacter
 				Sprite.Play();
 			}
 
-			if(Rb.GlobalPosition.X < 0 && Rb.GlobalPosition.Y == 0)
+			if(Rb.LinearVelocity.X < 0 && Rb.LinearVelocity.Y == 0)
 			{
 				LastSide = Side.Left;
 				Sprite.SpriteFrames = WalkSide;
@@ -135,14 +138,14 @@ public abstract partial class BaseEnemy : BaseCharacter
 				Sprite.Play();
 			}
 
-			if(Rb.GlobalPosition.X ==0 && Rb.GlobalPosition.Y > 0)
+			if(Rb.LinearVelocity.X ==0 && Rb.LinearVelocity.Y > 0)
 			{
 				LastSide = Side.Front;
 				Sprite.SpriteFrames = WalkFront;
 					Sprite.Play();
 			}
 
-			if(Rb.GlobalPosition.X ==0 && Rb.GlobalPosition.Y < 0)
+			if(Rb.LinearVelocity.X ==0 && Rb.LinearVelocity.Y < 0)
 			{	
 				LastSide = Side.Back;
 				Sprite.SpriteFrames = WalkBack;

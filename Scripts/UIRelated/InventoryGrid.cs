@@ -75,7 +75,7 @@ public partial class InventoryGrid : GridContainer
 				Dragging.ItemIconRect.GlobalPosition = MousePosition - OffSet;	
 			}
 
-		if (Input.IsActionJustReleased("LeftMouseClick"))
+		if (Input.IsActionJustReleased("LeftMouseClick") && Dragging != null)
 		{
 			EndItemDragging(MousePosition);
 		}
@@ -117,7 +117,7 @@ public partial class InventoryGrid : GridContainer
 
 				PlayerInventory.inventory[i] = PlayerInventory.inventory[ItemInitialIndex];
 				
-				PlayerInventory.inventory[ItemInitialIndex] = temp; //Inverte pra nao ter que cair em puitro caso do item diferente
+				PlayerInventory.inventory[ItemInitialIndex] = temp; //Inverte pra nao ter que cair em outro caso do item diferente
 				GD.Print("You find a new placement for the item");
 			}
 

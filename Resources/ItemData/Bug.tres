@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://cgkb2stqixfx7"]
 
 [ext_resource type="Texture2D" uid="uid://obuo8smi5y8q" path="res://TexturesWinterTale/Tilesets/BugGreen.png" id="1_jxmhu"]
-[ext_resource type="Script" uid="uid://ckd24iadb1y1l" path="res://Scripts/ItemRelated/ItemData.cs" id="2_4holk"]
+[ext_resource type="Script" uid="uid://pkryulof2i07" path="res://Scripts/ItemRelated/ConsumableItem.cs" id="2_4holk"]
 
 [resource]
 script = ExtResource("2_4holk")
