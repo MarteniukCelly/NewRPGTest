@@ -70,7 +70,7 @@ public abstract partial class BaseCharacter : Node
 	protected Side LastSide;
 
 	//Events
-	public event Action<float, float> OnHealthChange;
+	
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -99,8 +99,7 @@ public abstract partial class BaseCharacter : Node
 			return;			//protecao pro personagem n tomar dano morto
 		}
 		GD.Print(Damage);
-		Stats.CurrentLife -= Damage;
-		OnHealthChange?.Invoke(Stats.CurrentLife, Stats.MaxLife);
+		Stats.UpdateCurrentLife(Damage);
 		
 		if(Stats.CurrentLife <= 0)
 		{

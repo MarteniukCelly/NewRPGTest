@@ -232,7 +232,7 @@ script = ExtResource("10_4p54a")
 
 [node name="UIPlayer" type="CanvasLayer" parent="Player"]
 
-[node name="Root" type="Control" parent="Player/UIPlayer" node_paths=PackedStringArray("Player", "LabelLife", "LifePB", "InventoryUI")]
+[node name="Root" type="Control" parent="Player/UIPlayer" node_paths=PackedStringArray("Player", "LabelLife", "LifePB", "InventoryUI", "stats")]
 layout_mode = 3
 anchors_preset = 0
 size_flags_horizontal = 0
@@ -242,6 +242,7 @@ Player = NodePath("../../PlayerScript")
 LabelLife = NodePath("Label")
 LifePB = NodePath("TextureProgressBar")
 InventoryUI = NodePath("../Inventory")
+stats = NodePath("../../PlayerScript/Stats")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Player/UIPlayer/Root"]
 layout_mode = 0

@@ -15,13 +15,16 @@ public partial class Root : Control
 	[Export]
 	Control InventoryUI;
 
+	[Export]
+	Stats stats;
+
 	bool InventoryShowing = false;
 
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		Player.OnHealthChange += UpdateHealthBar ;
+		stats.OnHealthChange += UpdateHealthBar ;
 		InventoryUI.Visible = false;
 	}
 

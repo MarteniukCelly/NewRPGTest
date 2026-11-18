@@ -31,6 +31,11 @@ public partial class Stats : Node
 	[Export]
 	public float LevelUpCost;
 
+
+	// Events 
+
+	public event Action<float, float> OnHealthChange;
+
     public override void _Ready()
     {
 		CurrentLife = MaxLife;
@@ -92,9 +97,15 @@ public partial class Stats : Node
 			MaxLife += BonusMaxLife;
 			BaseDamage += BonusDamage;
 			BaseWalkSpeed += BonusSpeed;
-			BaseCharacter.OnHealthChange?.Invoke(Stats.CurrentLife, Stats.MaxLife);
+			OnHealthChange?.Invoke(this.CurrentLife, this.MaxLife);
 		}
 		
 	}
 
+
+	public void UpdateCurrentLife(float Damage) //variacao da funcao Recieve damage do base character pra n dar conflito 
+	{
+		CurrentLife -= Damage;
+		OnHealthChange?.Invoke(this.CurrentLife, this.MaxLife);
+	}
 }
