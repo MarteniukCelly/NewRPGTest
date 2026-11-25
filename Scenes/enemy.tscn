@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dosihivehtcs1"]
+[gd_scene load_steps=14 format=3 uid="uid://dosihivehtcs1"]
 
 [ext_resource type="Script" uid="uid://deax53agkb8my" path="res://Scripts/Characters/WolfScript.cs" id="1_hghv2"]
 [ext_resource type="Script" uid="uid://ct13g5vt6mgws" path="res://Scripts/Stats.cs" id="2_afpow"]
@@ -7,7 +7,10 @@
 [ext_resource type="SpriteFrames" uid="uid://wterxer8h5tq" path="res://Animations/Wolf/IdleBackWolf.tres" id="4_po0sg"]
 [ext_resource type="SpriteFrames" uid="uid://c6pn0qgpy4jsi" path="res://Animations/Wolf/WalkFrontWolf.tres" id="5_haro7"]
 [ext_resource type="SpriteFrames" uid="uid://ch0c8eh7ydydt" path="res://Animations/Wolf/WalkSideWolf.tres" id="6_56vhr"]
+[ext_resource type="SpriteFrames" uid="uid://b85gmc4npt463" path="res://Animations/Wolf/AttackSideWolf.tres" id="7_po0sg"]
 [ext_resource type="SpriteFrames" uid="uid://da030vou8hib7" path="res://Animations/Wolf/WalkBackWolf.tres" id="7_ta2yt"]
+[ext_resource type="SpriteFrames" uid="uid://bmw7bjobjch17" path="res://Animations/Wolf/AttackBackWolf.tres" id="8_haro7"]
+[ext_resource type="SpriteFrames" uid="uid://w86kqtroy4yg" path="res://Animations/Wolf/AttackFrontWolf.tres" id="9_56vhr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1f0kj"]
 radius = 37.735924
@@ -25,6 +28,7 @@ Stats = NodePath("../Stats")
 TargetingArea = NodePath("../Area2D")
 StopDistance = 400.0
 Stats = NodePath("../Stats")
+DamageAttack = 5.0
 Speed = 40.0
 AttackArea = NodePath("../Area2D")
 Rb = NodePath("..")
@@ -35,6 +39,10 @@ IdleBack = ExtResource("4_po0sg")
 WalkFront = ExtResource("5_haro7")
 WalkSide = ExtResource("6_56vhr")
 WalkBack = ExtResource("7_ta2yt")
+AttackSide = ExtResource("7_po0sg")
+AttackBack = ExtResource("8_haro7")
+AttackFront = ExtResource("9_56vhr")
+DeathAnim = ExtResource("9_56vhr")
 
 [node name="Stats" type="Node" parent="."]
 script = ExtResource("2_afpow")

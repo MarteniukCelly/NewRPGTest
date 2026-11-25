@@ -6,6 +6,7 @@ using System;
 public enum StatType
 {
 	MaxLife,
+	CurrentLife,
 	Damage,
 	Speed
 }

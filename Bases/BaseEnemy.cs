@@ -10,7 +10,7 @@ public abstract partial class BaseEnemy : BaseCharacter
 	
 	protected RigidBody2D Target;
 
-    protected State CurrentState= State.Idling;
+    protected State CurrentState = State.Idling;
 
 	[Export]
 	protected Area2D TargetingArea;
@@ -27,7 +27,7 @@ public abstract partial class BaseEnemy : BaseCharacter
 		Attacking,
 		Idling,
 		Hurt,
-		Dead,
+		Dead
 	}
 
 
@@ -43,7 +43,6 @@ public abstract partial class BaseEnemy : BaseCharacter
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		Animations();
 		
 	
 	}
@@ -51,6 +50,7 @@ public abstract partial class BaseEnemy : BaseCharacter
     public override void _PhysicsProcess(double delta)
     {
         ChasePlayer();
+		Animations();
     }
 
 
@@ -119,40 +119,75 @@ public abstract partial class BaseEnemy : BaseCharacter
 
 	protected void Animations()
 	{
-
+			///Walking Animations
 		if(CurrentState == State.Walking)
 		{
-			if(Rb.LinearVelocity.X > 0 && Rb.LinearVelocity.Y == 0)
+			var X = Rb.LinearVelocity.X;
+			var Y = Rb.LinearVelocity.Y;
+
+			GD.Print($"X:{Rb.LinearVelocity.X} Y:{Rb.LinearVelocity.Y}");
+
+			if( X > 0 && (Y> 0 && Y < 1) ) //Andar direita
 			{
 				LastSide = Side.Right;
 				Sprite.SpriteFrames = WalkSide;
-				Sprite.FlipH = false;
+				Sprite.FlipH = true;
 				Sprite.Play();
+				GD.Print("Animation function is working");
+
 			}
 
-			if(Rb.LinearVelocity.X < 0 && Rb.LinearVelocity.Y == 0)
+			if(X < 0  && (Y> 0 && Y < 1) ) //Andar esquerda
 			{
 				LastSide = Side.Left;
 				Sprite.SpriteFrames = WalkSide;
-				Sprite.FlipH = true;
+				Sprite.FlipH = false;
 				Sprite.Play();
+				GD.Print("Animation function is working");
 			}
 
-			if(Rb.LinearVelocity.X ==0 && Rb.LinearVelocity.Y > 0)
+			if((X > 0 && X < 1) && Y > 0) //Andar frente (seta p/baixo)
 			{
 				LastSide = Side.Front;
 				Sprite.SpriteFrames = WalkFront;
-					Sprite.Play();
+				Sprite.Play();
+				GD.Print("Animation function is working");
 			}
 
-			if(Rb.LinearVelocity.X ==0 && Rb.LinearVelocity.Y < 0)
+			if((X > 0 && X < 1) && Y < 0) //andar trás (seta p/cima)
 			{	
 				LastSide = Side.Back;
 				Sprite.SpriteFrames = WalkBack;
 				Sprite.Play();
+				GD.Print("Animation function is working");
 			}
+		}
+			///Idle Animations
+		if(CurrentState== State.Idling)
+		{
+			if(LastSide == Side.Right) //Idle direito
+			{
+				Sprite.SpriteFrames = IdleSide;
+				Sprite.FlipH = true;
+				Sprite.Play();
 
-
+			}
+			if(LastSide == Side.Left)
+			{
+				Sprite.SpriteFrames = IdleSide;
+				Sprite.FlipH = false;
+				Sprite.Play();
+			}
+			if(LastSide == Side.Front)
+			{
+				Sprite.SpriteFrames = IdleFront;
+				Sprite.Play();
+			}
+			if(LastSide == Side.Back)
+			{
+				Sprite.SpriteFrames = IdleBack;
+				Sprite.Play();
+			}
 		}
 	}
 
